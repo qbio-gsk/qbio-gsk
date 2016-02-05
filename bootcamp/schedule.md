@@ -37,6 +37,7 @@ coffee break
 - Depending on feedback from class end with either
     - t-test from here: http://joshaclark.com/wp-content/uploads/2014/06/l4+5.html (Lee)
     - or R 6-8 and 11-13 or some other subset http://swcarpentry.github.io/r-novice-gapminder/ (Lee)
+
 ##### Extra Resources
 - Swirl (great basic R tutorial with stats): http://swirlstats.com/
 - Biomedical Data Science (in R) by Rafael Irizarry and Michael Love: http://genomicsclass.github.io/book/
