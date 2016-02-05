@@ -15,7 +15,7 @@
  - Getting started (Lee)
     - Do you have a laptop and the internet? 
     - Do you have terminal? (If PC download from here: https://git-for-windows.github.io/)
-    - Download RStudio from here: https://www.rstudio.com/
+    - Download R and RStudio from these places: https://cran.revolutionanalytics.com/ (R-3.2.3.pkg) and https://www.rstudio.com/
 
 ( Depending on how well we're doing, coffee break either here)
 
