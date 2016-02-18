@@ -32,9 +32,9 @@ LUNCH
 
 coffee break
 
-- Depending on feedback from class end with either
-    - t-test from here: http://joshaclark.com/wp-content/uploads/2014/06/l4+5.html (Lee)
-    - or R 6-8 and 11-13 or some other subset http://swcarpentry.github.io/r-novice-gapminder/ (Lee)
+- After the break we covered 
+    - lesson 6 (subsetting data)
+    - lesson 8 (graphics with ggplot2)
 
 ##### Extra Resources
 - Swirl (great basic R tutorial with stats): http://swirlstats.com/
