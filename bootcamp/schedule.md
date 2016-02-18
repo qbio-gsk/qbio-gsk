@@ -16,12 +16,10 @@
     - Do you have a laptop and the internet? 
     - Do you have terminal? (If PC download from here: https://git-for-windows.github.io/)
     - Download R and RStudio from these places: https://cran.revolutionanalytics.com/ (R-3.2.3.pkg) and https://www.rstudio.com/
-
-( Depending on how well we're doing, coffee break either here)
-
 - Using Terminal 1-4 from here: http://swcarpentry.github.io/shell-novice/ (Sonya)
 
-(... or here)
+coffee break
+
 - Using Terminal 5-7 from here: http://swcarpentry.github.io/shell-novice/ (Sonya)
 
 (pre-lunch feedback one good thing, one bad thing on sticky notes)
