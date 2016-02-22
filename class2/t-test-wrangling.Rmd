@@ -1,0 +1,93 @@
+---
+title: "T-test example"
+author: "Lee"
+date: "February 22, 2016"
+output: html_document
+---
+
+This is an R Markdown document. Think of it like a lab notebook that can dynamically run small amounts of computational experiments.  Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button (in Rstudio, one of the icons just below the open file tabs) a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+can <- read.csv(file = '~/qbio-gsk/data/cancer.csv')
+is.data.frame(can)
+```
+
+Let's not deal with un-coded factor values, so we can label treatment groups (0,1) as (placebo, aloe juice):
+
+```{r}
+can$TRT.CODE <- factor(can$TRT, labels=c('Placebo','Aloe Juice'))
+```
+
+Now, we can test for differences in the scores by t-test
+
+```{r}
+t.test(can$TOTALCW4 ~ can$TRT.CODE, var.equal=FALSE)
+```
+
+
+I usually do not use this formulation (where R tests for differences in the TOTALCW4 var, stratifying groups by TRT.CODE)
+but it works fine here, since we have complete data.  There does not seem to be a difference in treatment versus placebo here.
+
+So, is the difference still not significant at TOTALCW6?
+
+```{r,error=TRUE}
+t.test(can$TOTALCW6 ~ can$TRT.CODE, var.equal=FALSE)
+```
+
+Whaaa??  Turns out this is a coersion issue, caused by the missing data encoded by '.'
+Bear with me.
+
+Let's try to compare the value directly, by getting a vector of values for placebo, aloe juice groups at week 6:
+
+```{r}
+placebo.vals <- subset(can, TRT.CODE == "Placebo" & TOTALCW6 != '.', as.numeric(TOTALCW6))
+aloe.vals <- subset(can, TRT.CODE == "Aloe Juice" & TOTALCW6 != '.', as.numeric(TOTALCW6))
+```
+
+
+```{r,error=TRUE}
+t.test(placebo.vals, aloe.vals)
+```
+
+Seems the problem is in trying to take the max() (or abs()) of our values.  
+
+```{r,error=TRUE}
+max(aloe.vals)
+```
+
+What's the type of this variable?
+
+```{r}
+typeof(aloe.vals)
+```
+
+Ah, maybe this is it.  t.test needs a vector maybe?
+
+```{r}
+aloe.vals <- unlist(aloe.vals)
+aloe.vals
+```
+
+Aha.  The presence of '.' to encode missing data caused this column (or list) to be encoded as a factor, since the '.' could not be coerced to a numeric value in 'read.csv'
+Let's explicitly cast the unlisted values to numeric, get a numeric vector:
+
+```{r}
+aloe.vals <- as.numeric(unlist(aloe.vals))
+aloe.vals
+```
+
+Bingo.
+
+```{r}
+placebo.vals <- as.numeric(unlist(placebo.vals))
+placebo.vals
+```
+
+Ready to test, finally: 
+
+```{r}
+t.test(placebo.vals, aloe.vals)
+```
+
