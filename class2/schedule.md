@@ -15,3 +15,13 @@ Monday Feb 22, 2016, 1pm-5pm, with 2-3 breaks for 10-15 min
 - Swirl, basic interactive R tutorial with stats: http://swirlstats.com/
 - Biomedical Data Science by Rafael Irizarry and Michael Love: http://genomicsclass.github.io/book/
 
+##### Extra plotting code not in links:
+placebo.data <- subset(can, TRT.CODE == 'Placebo')
+aloe.data <- subset(can, TRT.CODE == 'Aloe Juice')
+t.aloe <- t.test(aloe.data$TOTALCIN, aloe.data$TOTALCW4, paired = TRUE)
+t.placebo <- t.test(placebo.data$TOTALCIN, placebo.data$TOTALCW4, paired = TRUE)
+
+placebo.res <- data.frame(treatment = 'placebo', estimate = t.placebo$estimate, lower = t.placebo$conf.int[1], upper = t.placebo$conf.int[2])
+aloe.res <- data.frame(treatment = 'aloe', estimate = t.aloe$estimate, lower = t.aloe$conf.int[1], upper = t.aloe$conf.int[2])
+plot.base <- rbind(placebo.res, aloe.res)
+ggplot(plot.base, aes(x = treatment, y = estimate, color = treatment)) + geom_point() + geom_errorbar(aes(ymin= lower, ymax=upper), width=.1)
