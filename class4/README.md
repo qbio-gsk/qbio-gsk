@@ -13,6 +13,7 @@ https://github.com/taoliu/MACS/wiki/Install-macs2
 http://www.htslib.org/download/
   - IGV
 http://www.broadinstitute.org/igv/home
+- Link to intermediate files if needed: https://drive.google.com/file/d/0B3kKZSfJa-cDNmdTR0JvVEJMR0E/view?usp=sharing
 
 
 ##### Additional materials
