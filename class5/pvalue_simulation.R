@@ -9,7 +9,7 @@ generate_plots <- function(N, n_sig, effect_size){
   sig_p <- data.frame(data = rexp(n_sig, effect_size), origin="alternative")
   df <- data.frame(rbind(null_p,sig_p))
   
-  h <- ggplot(df) + geom_histogram(aes(x = data)) + xlab("observed p-values") + ylab("count") + ggtitle("Histogram of observed Pvalues")
+  h <- ggplot(df) + geom_histogram(aes(x = data), bins = 50) + xlab("observed p-values") + ylab("count") + ggtitle("Histogram of observed Pvalues")
   h_fill <- ggplot(df, aes(fill = origin)) + geom_bar(aes(x = data), stat = "bin") + xlab("observed p-values") + ylab("count") + ggtitle("Histogram of observed Pvalues")
   return(list(histogram = h, mixture = h_fill))
 }
