@@ -28,8 +28,7 @@ For the third hour, we will cover Principal Component Analysis:
 The last hour of class time will be devoted to project consultation time:
 - you can bounce ideas off of us, or ask us for suggestions about project topics and data sources.
 - we will present potential sample project ideas and data sources (ReCount, ENCODE):
-..* pick a question to ask
-..* pick a data set
-..* download the data
-..* load it into R
-
+  - pick a question to ask
+  - pick a data set
+  - download the data
+  - load it into Rstudio
