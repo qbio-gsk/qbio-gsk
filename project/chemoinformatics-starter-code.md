@@ -8,12 +8,15 @@ https://www.biostars.org/p/109706/:
 
 
 > install.packages('rjson')
+
 > install.packages('RCurl')
 
 > library(rjson)
+
 > library(RCurl)
 
 > u <- getURL("http://togows.dbcls.jp/entry/uniprot/PROSC_MOUSE.json")
+
 > j <- fromJSON(u)
 
 > j[[1]]$sq$MW
@@ -25,15 +28,21 @@ Bioconductor example:
 For example using uniprot ID P00519 (human ABL1), this is a combination of examples here https://support.bioconductor.org/p/56824/ and here https://www.bioconductor.org/packages/3.3/bioc/manuals/UniProt.ws/man/UniProt.ws.pdf
 
 > source("https://bioconductor.org/biocLite.R")
+
 > biocLite("UniProt.ws")
+
 > library("UniProt.ws")
 
 > up <- UniProt.ws(taxId=9606)
 
 > kt <- "UNIPROTKB"
+
 > keys <- c("P00519") #Human ABL1
+
 > columns <- c("UNIPROTKB", "PDB")
+
 > res <- select(up, keys, columns, kt)
+
 > res
 > summary(res)
 
