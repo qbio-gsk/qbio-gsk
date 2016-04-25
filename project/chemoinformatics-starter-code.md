@@ -39,6 +39,7 @@ For example using uniprot ID P00519 (human ABL1), this is a combination of examp
 
 Example Question #3: Can we find all drugs that target HER2 kinase from ChemBL?
 
+For the future? (Or maybe you can figure it out on your own...)
+
 Here is a resource for this: https://github.com/rajarshi/chemblr
 
-More details in the future!
