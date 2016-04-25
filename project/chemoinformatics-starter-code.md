@@ -42,4 +42,18 @@ Example Question #3: Can we find all drugs that target HER2 kinase from ChemBL?
 For the future? (Or maybe you can figure it out on your own...)
 
 Here is a resource for this: https://github.com/rajarshi/chemblr
+This rcdk package also seems nice: https://cran.r-project.org/web/packages/rcdk/vignettes/rcdk.pdf
+https://cran.r-project.org/web/packages/rcdk/index.html
+Another good tutorial: http://www.cureffi.org/2013/09/23/a-quick-intro-to-chemical-informatics-in-r/
+
+> install.packages("rcdk")
+> library(rcdk)
+> anle138b = parse.smiles("C1OC2=C(O1)C=C(C=C2)C3=CC(=NN3)C4=CC(=CC=C4)Br")[[1]]
+> rcdkplot = function(molecule,width=500,height=500) {
+    par(mar=c(0,0,0,0)) # set margins to zero since this isn't a real plot
+    temp1 = view.image.2d(molecule,width,height) # get Java representation into an image matrix. set number of pixels you want horiz and vertical
+    plot(NA,NA,xlim=c(1,10),ylim=c(1,10),xaxt='n',yaxt='n',xlab='',ylab='') # create an empty plot
+    rasterImage(temp1,1,1,10,10) # boundaries of raster: xmin, ymin, xmax, ymax. here i set them equal to plot boundaries
+}
+> rcdkplot(anle138b)
 
