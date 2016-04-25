@@ -17,8 +17,16 @@ biocLite("GenomicRanges")
 biocLite("GenomicFeatures")
 biocLite("BSgenome")
 bioCLite("AnnotationDbi")
-
 ```
+
+Please also install packages with annotation and sequence data for human (may take some time to download):
+
+```R
+source("https://bioconductor.org/biocLite.R")
+biocLite("TxDb.Hsapiens.UCSC.hg19.knownGene")
+biocLite("BSgenome.Hsapiens.UCSC.hg19")
+```
+
  	
 For the third hour, we will cover Principal Component Analysis:
 - examples from the vignette
