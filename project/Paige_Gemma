@@ -1,0 +1,7 @@
+setwd("Desktop")
+project <- read.csv("counts_scaled_DESeq_edit.csv")
+row.names(project) <- project$GeneID
+project <- project[,3:7]
+project_matrix <- data.matrix(project)
+project_subset_matrix <- project_matrix[rowSums(project_matrix)>3.0e+05,]
+heatmap(project_subset_matrix, Rowv = NA, col = cm.colors(256), margins = c(5,10))
