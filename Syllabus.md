@@ -4,7 +4,7 @@ GSK Graduate School, Spring 2016
 
 ### Location: 
 
-Zuckerman Research Center (**ZRC 138**)
+Zuckerman Research Center (**ZRC-138**)
 
 ### Summary: 
 
@@ -51,7 +51,7 @@ when the course is offered in future years.
 
 ### Class Sessions:
 
-1. **The bootcamp** (Saturday, February 6, 2016)
+1. **Bootcamp** (Saturday, February 6, 2016)
 
    Basic tools for research computing. Installation of shell, git, R and  
    Rstudio. Introduction to shell computing, the R programming language,  
@@ -113,11 +113,9 @@ makes use of the following online resources:
 
 **Software Capentry**
 
--   Introduction to the Shell:
-    > [*http://swcarpentry.github.io/shell-novice/*](http://swcarpentry.github.io/shell-novice/)
+-   [*Introduction to the Shell*](http://swcarpentry.github.io/shell-novice/)
 
--   R for Reproducible Scientific Analysis:
-    > [*http://swcarpentry.github.io/r-novice-gapminder/*](http://swcarpentry.github.io/r-novice-gapminder/)
+-   [*R for Reproducible Scientific Analysis*](http://swcarpentry.github.io/r-novice-gapminder/)
 
 **qBio-I course materials (courtesy of Jason Banfelder)**
 
