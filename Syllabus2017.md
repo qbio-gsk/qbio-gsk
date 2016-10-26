@@ -54,19 +54,22 @@ when the course is offered in future years.
 
 ### Lecture dates (February 4, 2017 – Monday, May 22, 2017)
 
-One bootcamp: Saturday, February 4, 2017, 9:00 AM – 5:00 PM
+One bootcamp: 
+- Saturday, February 4, 2017, 9:00 AM – 5:00 PM
 
 Fifteen class sessions:
 - Thirteen sessions on Mondays 1:00 PM – 3:00 PM (February 6, February 13, February 27, March 6, March 13, March 20, April 3, April 10, April 24, May 1, May 8, May 15 and May 22)
 - Two sessions on Fridays from 1:00 PM – 3:00 PM (March 31 and April 28)
 
-### Class Sessions:
+### Bootcamp details:
 
 0. **Bootcamp** (Saturday, February 4, 2017)
 
    Basic tools for research computing. Installation of shell, git, R and  
    Rstudio. Introduction to shell computing, the R programming language,  
    basic statistics and visualization.
+
+### Class Sessions:
 
 1.  **Lab 1** (Monday, February 6, 2017)
 
