@@ -40,6 +40,9 @@ class.
 - Yuri Pritykin ([*pritykin@cbio.mskcc.org*](mailto:pritykin@cbio.mskcc.org))
 - Lee Zamparo ([*zamparol@cbio.mskcc.org*](mailto:zamparol@cbio.mskcc.org))
 
+### Teaching Fellow:
+- Robert Bowman (bowmanr@mskcc.org)
+
 ### Assessment:
 
 This class will not be graded. However, periodic student surveys in
