@@ -95,11 +95,11 @@ Fifteen class sessions:
 
 6. **Lab 6** (Monday, March 20, 2017)
 
-   Practical RNA-seq with DESeq, part I
+   Practical RNA-seq with DESeq, part I.
    
 7. **Lab 7** (Friday, March 31, 2017)
 
-   Practical RNA-seq with DESeq, part II
+   Practical RNA-seq with DESeq, part II.
 
 8. **Lab 8** (Monday, April 3, 2017)
 
@@ -115,7 +115,7 @@ Fifteen class sessions:
 
 11. **Lab 11** (Friday, April 28, 2017)
 
-   Exploratory data analysis by PCA, clustering, t-SNE
+   Exploratory data analysis by PCA, clustering, t-SNE.
 
 12. **Lab 12** (Monday, May 1, 2017)
 
