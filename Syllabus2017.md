@@ -63,7 +63,7 @@ Fifteen class sessions:
 
 ### Bootcamp details:
 
-0. **Bootcamp** (Saturday, February 4, 2017)
+ **(Saturday, February 4, 2017)** 
 
    Basic tools for research computing. Installation of shell, git, R and  
    Rstudio. Introduction to shell computing, the R programming language,  
@@ -73,7 +73,7 @@ Fifteen class sessions:
 
 1.  **Lab 1** (Monday, February 6, 2017)
 
-   Review of loading and plotting data in R. (do we want to do more introductory R material here?)
+   Review of loading and plotting data in R. 
    
 2. **Lab 2** (Monday, February 13, 2017)
 
