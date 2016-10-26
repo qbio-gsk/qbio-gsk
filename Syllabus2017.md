@@ -25,7 +25,7 @@ to probability, elementary statistics and hypothesis testing;
 experimental design and tools for differential expression analysis in
 RNA-seq and ChIP-seq; interpreting model fit, correct interpretation of
 statistical evidence, and multiple hypothesis testing correction
-methods; common data-structures for working with biological sequences;
+methods; common data structures for working with biological sequences;
 enrichment testing for ranked gene sets; common bioinformatics tools and
 data quality assessment tools; introduction to structural biology and
 tools for visualization.
