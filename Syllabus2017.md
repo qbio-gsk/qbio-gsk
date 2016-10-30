@@ -99,27 +99,27 @@ Fifteen class sessions:
    
 7. **Lab 7** (Friday, March 31, 2017)
 
-   Practical RNA-seq with DESeq, part II.
+   Practical ChIP-seq, peak calling with MACS2, viewing output data in genome browsers.   
 
 8. **Lab 8** (Monday, April 3, 2017)
 
-   Practical ChIP-seq, peak calling with MACS2, viewing output data in genome browsers.   
+   Efficent ways to source data from public repositories, discussion of project ideas.
 
 9.  **Lab 9** (Monday, April 10, 2017)
 
-   Efficent ways to source data from public repositories, discussion of project ideas.
-   
-10. **Lab 10** (Monday, April 24, 2017)
-
     Interpreting P-values and Multiple Hypothesis Testing.
 
-11. **Lab 11** (Friday, April 28, 2017)
+10. **Lab 10** (Monday, April 24, 2017
 
    Exploratory data analysis by PCA, clustering, t-SNE.
 
-12. **Lab 12** (Monday, May 1, 2017)
+11. **Lab 11** (Friday, April 28, 2017)
 
     Bioinformatics tools: browsers, GO enrichment, gene set enrichment analysis.
+
+12. **Lab 12** (Monday, May 1, 2017)
+
+    Sequence Alignment and Chemoinformatics/PDB tools
 
 13. **Lab 13** (Monday, May 8, 2017)
 
