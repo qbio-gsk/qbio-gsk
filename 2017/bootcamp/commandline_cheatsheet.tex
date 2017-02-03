@@ -1,0 +1,228 @@
+\documentclass[10pt,landscape]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{hyperref}
+
+% To make this come out properly in landscape mode, do one of the following
+% 1.
+%  pdflatex latexsheet.tex
+%
+% 2.
+%  latex latexsheet.tex
+%  dvips -P pdf  -t landscape latexsheet.dvi
+%  ps2pdf latexsheet.ps
+
+
+% If you're reading this, be prepared for confusion.  Making this was
+% a learning experience for me, and it shows.  Much of the placement
+% was hacked in; if you make it better, let me know...
+
+
+% 2008-04
+% Changed page margin code to use the geometry package. Also added code for
+% conditional page margins, depending on paper size. Thanks to Uwe Ziegenhagen
+% for the suggestions.
+
+% 2006-08
+% Made changes based on suggestions from Gene Cooperman. <gene at ccs.neu.edu>
+
+
+% To Do:
+% \listoffigures \listoftables
+% \setcounter{secnumdepth}{0}
+
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+\begin{multicols}{3}
+
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\begin{center}
+     \Large{\textbf{Unix Command Line\\
+      Cheat Sheet}} \\
+\end{center}
+
+\section{Files and Directories}
+\emph{Doing things:} \\
+\begin{tabular}{@{}ll@{}}
+\verb!cd!  & change directory \\
+\verb!ls!  & list \\
+\verb!pwd! & print working directory \\
+\verb!mv!  & move \\
+\verb!rm!  & remove \\
+\verb!cp!  & copy \\
+\end{tabular}
+\vspace{5mm}\\
+\emph{The lingo:} \\
+\begin{tabular}{@{}ll@{}}
+\verb!\!  & root directory \\
+\verb!~!  & home directory \\
+\verb!.!  & this directory \\
+\verb!..! & one directory back \\
+\verb!*!  & wild card \\
+\end{tabular}
+\vspace{5mm}\\
+\emph{Tips 'n tricks:} \\
+\begin{tabular}{@{}ll@{}}
+\verb!TAB!  & tab completion \\
+\verb!man __!  & see the manual for that command \\
+\verb!^A!  & beginning of line \\
+\verb!^E!  & end of line \\
+\verb!^U! & delete whole line \\
+\verb!PS1='$'!  & reduce prompt to just \$ \\
+\verb!clear!  & clean workspace (keeps history)\\
+\verb!^C! & ABORT/CANCEL \\
+\end{tabular}
+
+
+\section{A bit more advanced}
+\begin{tabular}{@{}ll@{}}
+\verb!head!  & the beginning of a file \\
+\verb!tail!  & the end of a file \\
+\verb!echo!  & print on screen \\
+\verb!wc!    & word count \\
+\verb!sort!  & sort \\
+\verb!history!  & print history \\
+\end{tabular}
+
+
+\newlength{\MyLen}
+\settowidth{\MyLen}{\texttt{letterpaper}/\texttt{a4paper} \ }
+
+\section{Pipes and filters}
+\begin{tabular}{@{}ll@{}}
+\verb!>!  & redirect \\
+\verb!|!  & pipe \\
+\end{tabular}
+\vspace{2.5mm}\\
+\emph{Examples:} \\
+sort -n lengths.txt $>$ sorted-lengths.txt\\
+wc -l *.txt $|$ sort -n $|$ head -5
+
+\section{Looking at files in command line}
+\begin{tabular}{@{}ll@{}}
+\verb!cat!  & concatenates contents line by line, printing \\
+\verb!more!  & shows file and takes back to command line \\
+\verb!less!  &  shows file in whole window\\
+\end{tabular}
+
+\section{NANO - simplest text editor}
+\begin{tabular}{@{}ll@{}}
+\verb!^o!  & write out \\
+\verb!^x!  & exit \\
+\verb!^k!  & cut \\
+\verb!^w!  & find \\
+\end{tabular}
+
+\section{Searching}
+\begin{tabular}{@{}ll@{}}
+\verb!grep!  & grep \\
+\verb!find!  & find \\
+\end{tabular}
+\vspace{2.5mm}\\
+\emph{Examples:} \\
+grep -n -w "the" haiku.txt \\
+find . -name '*.txt' \\
+grep "FE" \$(find .. -name '*.pdb')
+
+\section{Loops}
+for datafile in *[AB].txt; do echo \$datafile stats-\$datafile; done
+
+\section{Variations on these themes}
+
+\subsection{list}
+\begin{tabular}{@{}ll@{}}
+\verb!ls -a!  & list even files starting with . \\
+\verb!ls -l!  & list in long format (includes dates)\\
+\verb!ls -F!  & list with slash after directories \\
+\end{tabular}
+\vspace{2.5mm}\\
+\subsection{wc}
+\begin{tabular}{@{}ll@{}}
+\verb!wc -l!  & count lines in file \\
+\verb!wc -w!  & count words in file\\
+\verb!wc -c!  & count characters in file \\
+\end{tabular}
+
+\section{Shell scripting}
+\begin{tabular}{@{}ll@{}}
+\verb!#!  & starts comment lines \\
+\verb!$1 or $2 etc.!  & indicates arguments to use\\
+\verb!$@!  & indicates to use all arguments \\
+\end{tabular}
+
+\section{BONUS}
+\begin{tabular}{@{}ll@{}}
+\verb!cut!  & cuts \\
+\verb!sed!  & seds\\
+\verb!awk!  & awks \\
+\end{tabular}
+
+\rule{0.3\linewidth}{0.25pt}
+\scriptsize
+
+This is a command line cheat sheet made February 2016 for Gerstner Sloan Kettering Graduate Students. It is still a work in progress. And remember Googling is your friend!
+%THIS FORMAT IS BORROWED FROM LATEX CHEATSHEET WITH CP INFO BELOW
+%Copyright \copyright\ 2014 Winston Chang
+
+%\href{http://www.stdout.org/~winston/latex/}{http://www.stdout.org/$\sim$winston/latex/}
+
+
+\end{multicols}
+\end{document}
