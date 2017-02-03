@@ -28,13 +28,13 @@ LUNCH
 
 1:15 - 4:30 pm
 - Brief intro (Lee)
-- Learning R 1-5 from here http://swcarpentry.github.io/r-novice-gapminder/ (Lee)
+- Learning R 1-5 from here http://swcarpentry.github.io/r-novice-gapminder/ (Yuri)
 
 coffee break
 
 - After the break we covered 
-    - lesson 6 (subsetting data)
-    - lesson 8 (graphics with ggplot2)
+    - lesson 6 [subsetting data](http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting/)
+    - lesson 8 [graphics with ggplot2](http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2/)
 
 ##### Extra Resources
 - Swirl (great basic R tutorial with stats): http://swirlstats.com/
