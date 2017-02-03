@@ -2,9 +2,9 @@
 
 Monday Feb 6, 2017, 1pm-3pm, with 1 breaks for 10-15 min
 
-- We will pick up on data manipulation in R from the bootcamp, reviewing how to (load data into R)[http://swcarpentry.github.io/r-novice-gapminder/13-dplyr/]
-- We will show you how to (tidy up your data)[http://swcarpentry.github.io/r-novice-gapminder/14-tidyr/]
-- We will show more examples of cleaning, separating and visualizing a (sample data set)[http://varianceexplained.org/r/tidy-genomics/]
+- We will pick up on data manipulation in R from the bootcamp, reviewing how to [load data into R](http://swcarpentry.github.io/r-novice-gapminder/13-dplyr/)
+- We will show you how to [tidy up your data](http://swcarpentry.github.io/r-novice-gapminder/14-tidyr/)
+- We will show more examples of cleaning, separating and visualizing a [sample data set](http://varianceexplained.org/r/tidy-genomics/)
 
 ##### Additional materials
 
