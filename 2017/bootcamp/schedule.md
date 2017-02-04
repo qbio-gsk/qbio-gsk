@@ -11,7 +11,7 @@
     - Brief summary of Material for day and hopes for course
     - Stickies
     - Slack (Download here: https://slack.com/)
-    - Downloading data for the morning (from here: http://swcarpentry.github.io/shell-novice/shell-novice-data.zip )
+    - Downloading data for the morning (from [here](https://github.com/swcarpentry/shell-novice/blob/gh-pages/data/shell-novice-data.zip) )
  - Getting started (Lee)
     - Do you have a laptop and the internet? 
     - Do you have terminal? (If PC download from here: https://git-for-windows.github.io/)
