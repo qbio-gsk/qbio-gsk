@@ -1,6 +1,6 @@
-# Schedule of Lab 1
+# Schedule of Lab 2
 
-Monday Feb 13, 2017, 1pm-3pm, with 1 break for 10-15 min
+Monday Feb 13, 2017, 1pm-3pm, with one break for 10-15 min
 
 - Basic intro to statistics, starting with [Lesson 1](http://physiology.med.cornell.edu/people/banfelder/qbio/lecture_notes/1.1_characterizing_a_distribution.pdf) of [the Weill Cornell qBio class](http://physiology.med.cornell.edu/people/banfelder/qbio/schedule_2015/). 
 
