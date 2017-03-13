@@ -91,11 +91,11 @@ Fifteen class sessions:
    
 5. **Lab 5** (Monday, March 13, 2017)
 
-   Genomic data-structures in R and Bioconductor: GenomicRanges, GenomicFeatures, BSgenome, AnnotationDbi.
+   Genomic data-structures in R and Bioconductor: GenomicRanges, GenomicFeatures, Biostrings, BSgenome, AnnotationDbi.
 
 6. **Lab 6** (Monday, March 20, 2017)
 
-   Practical RNA-seq with DESeq, part I.
+   Practical RNA-seq with DESeq.
    
 7. **Lab 7** (Friday, March 31, 2017)
 
