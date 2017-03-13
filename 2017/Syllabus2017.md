@@ -91,7 +91,7 @@ Fifteen class sessions:
    
 5. **Lab 5** (Monday, March 13, 2017)
 
-   Genomic data-structures in R and Bioconductor: GenomicRanges, GenomicFeatures, Biostrings, BSgenome, AnnotationDbi.
+   Genomic data structures in R and Bioconductor: GenomicRanges, GenomicFeatures, Biostrings, BSgenome, AnnotationDbi.
 
 6. **Lab 6** (Monday, March 20, 2017)
 
