@@ -6,6 +6,7 @@ Monday Mar 20, 2017, 3-5pm, with one break for 10-15 min
 ```R
 install.packages("swirl")
 ```
+- Various forms of publicly available high-throughput data: [ENCODE](https://www.encodeproject.org/), [cBioPortal](http://www.cbioportal.org/), [GEO](https://www.ncbi.nlm.nih.gov/geo/), etc.
 - Intro into RNA-seq.
 - RNA-seq data analysis with package [DESeq2](https://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) using [the vignette](https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.pdf). Please install the DESeq2 package, as well as the package [pasilla](https://bioconductor.org/packages/release/data/experiment/html/pasilla.html) with the example data:
 ```R
