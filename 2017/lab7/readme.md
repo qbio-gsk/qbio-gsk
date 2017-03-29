@@ -5,6 +5,7 @@ Monday Mar 31, 2017, 1pm-3pm, with 2-3 breaks for 10-15 min
 - ChIP-seq practical
 - Adapted from https://www.ebi.ac.uk/training/online/course/ebi-next-generation-sequencing-practical-course/chip-seq-analysis/chip-seq-practical
 - At the beginning of class download:
+  - Data from here: https://github.com/qbio-gsk/qbio-gsk/blob/master/2016/class4/ChIP-seq.zip
   - Bowtie
 http://bowtie-bio.sourceforge.net/index.shtml
   - Macs2
