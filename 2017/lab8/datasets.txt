@@ -1,0 +1,70 @@
+link: http://swcarpentry.github.io/r-novice-gapminder/04-data-structures-part1/
+FILE> NEW FILE > TEXT FILE
+copy and paste
+
+coat,weight,likes_string
+calico,2.1,1
+black,5.0,0
+tabby,3.2,1
+ save as data/feline-data.csv
+getwd()
+setwd()
+cats <- read.csv(file='feline-data.csv')
+cats
+cats$weight
+
+link: http://swcarpentry.github.io/r-novice-gapminder/05-data-structures-part2/
+download.file('https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv', destfile= "gapminder-FiveYearData.csv")
+list.files()
+gapminder <- read.csv("gapminder-FiveYearData.csv")
+str(gapminder)
+
+link: http://joshaclark.com/wp-content/uploads/2014/06/l4+5.html
+cancer<-read.csv(url('http://joshaclark.com/wp-content/uploads/2014/05/cancer.csv'))
+mean(cancer$AGE)
+
+NOTE MAY NEED TO HAVE install.packages('RCurl') and library('RCurl') for these to work.
+
+link: http://varianceexplained.org/r/tidy-genomics/
+install.packages('readr')
+library('readr')
+original_data <- read_delim("http://varianceexplained.org/files/Brauer2008_DataSet1.tds", delim = "\t")
+View(original_data)
+original_data$NAME[1:3]
+library(dplyr)
+library(tidyr)
+cleaned_data <- original_data %>%
+  separate(NAME, c("name", "BP", "MF", "systematic_name", "number"), sep = "\\|\\|")
+View(cleaned_data)
+
+link: http://swcarpentry.github.io/r-novice-gapminder/11-writing-data/
+aust_subset <- gapminder[gapminder$country == "Australia",]
+write.table(aust_subset,
+  file="gapminder-aus.csv",
+  sep=","
+)
+list.files()
+
+link: http://varianceexplained.org/RData/code/code_lesson2/
+library("ggplot2")
+data("diamonds")
+ggplot(diamonds, aes(x=carat, y=price)) + geom_point()
+
+source("https://bioconductor.org/biocLite.R")
+biocLite("BSgenome")
+library(BSgenome.Celegans.UCSC.ce2)
+genome <- BSgenome.Celegans.UCSC.ce2
+organism(genome)
+
+https://www.bioconductor.org/packages/devel/bioc/vignettes/BSgenome/inst/doc/GenomeSearching.pdf
+Do FTP:
+ftp ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR066/SRR066787/
+ls
+get SRR066787.fastq.gz
+And then go through the appendix of this tutorial:
+https://www.bioconductor.org/help/course-materials/2015/CSAMA2015/lab/Epigenetics_and_Chip_seqLab.pdf
+
+SRA (need command line toolkit): https://www.ncbi.nlm.nih.gov/sra/?term=h3k27ac+histone+chip
+ENA has good in browser access to data rather than needing to use a command line toolkit to download:
+http://www.ebi.ac.uk/ena/data/search?query=h3k27ac+histone+chip
+ http://www.ebi.ac.uk/ena/data/view/SRX1456522
