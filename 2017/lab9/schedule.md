@@ -19,8 +19,8 @@ We will look at an experiment assaying acetylated regions in mouse (via H3K27ac 
 
 ## Caveats
 - Make sure you can load each of the packages in the script. 
-- In particular, EpigeneticsCSAMA2015 (provided in the repo) must be loaded either by `R CMD INSTALl` or using the Rstudio GUI.
-- Also make sure you change the script so that you can load the data (in the macs2 folder) on your own machine.
+- In particular, EpigeneticsCSAMA2015 (provided in the repo) must be loaded either by `R CMD INSTALL` or using the Rstudio GUI.
+- Make sure you change the script so that you can load the data (in the macs2 folder) on your own machine.
 
 
 
