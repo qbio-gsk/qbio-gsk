@@ -16,8 +16,11 @@ We will revisit the meaning of Pvalues, examine possible outcomes of high-throug
 We will look at an experiment assaying acetylated regions in mouse (via H3K27ac ChIP), and apply multiple hypothesis correction to the P-values produced by MACS2, to eliminate spurious peaks.
 - The script used in class is in the repo (H3K27ac_chip_study.R)
 - The source material, including some downstream analysis is [here](https://www.bioconductor.org/help/course-materials/2015/CSAMA2015/lab/Epigenetics_and_Chip_seqLab.pdf)
-- *** You will have to make sure you can load each of the packages ***
-- *** Also: make sure you change the script so that you can load the data (in the macs2 folder) on your own machine *** 
+
+## Caveats
+- Make sure you can load each of the packages in the script. 
+- In particular, EpigeneticsCSAMA2015 (provided in the repo) must be loaded either by `R CMD INSTALl` or using the Rstudio GUI.
+- Also make sure you change the script so that you can load the data (in the macs2 folder) on your own machine.
 
 
 
