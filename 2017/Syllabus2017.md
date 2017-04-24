@@ -111,11 +111,11 @@ Fifteen class sessions:
 
 10. **Lab 10** (Monday, April 24, 2017
 
-   Exploratory data analysis by PCA, clustering, t-SNE.
+   Bioinformatics tools: browsers, GO enrichment, gene set enrichment analysis. 
 
 11. **Lab 11** (Friday, April 28, 2017)
 
-    Bioinformatics tools: browsers, GO enrichment, gene set enrichment analysis.
+    Exploratory data analysis by PCA, clustering, t-SNE.
 
 12. **Lab 12** (Monday, May 1, 2017)
 
