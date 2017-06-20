@@ -58,7 +58,7 @@ One bootcamp:
 - Saturday, February 4, 2017, 9:00 AM – 5:00 PM
 
 Fifteen class sessions:
-- Thirteen sessions on Mondays 1:00 PM – 3:00 PM 
+- Thirteen sessions on Mondays 1:00 PM – 3:00 PM (later on 3-5pm)
    - (February 6, February 13, February 27, March 6, March 13, March 20, April 3, April 10, April 24, May 1, May 8, May 15 and May 22)
 - Two sessions on Fridays from 1:00 PM – 3:00 PM 
    - (March 31 and April 28)
@@ -107,7 +107,7 @@ Fifteen class sessions:
 
 9.  **Lab 9** (Monday, April 10, 2017)
 
-    Interpreting P-values and Multiple Hypothesis Testing.
+   Interpreting P-values and Multiple Hypothesis Testing.
 
 10. **Lab 10** (Monday, April 24, 2017
 
@@ -115,11 +115,11 @@ Fifteen class sessions:
 
 11. **Lab 11** (Friday, April 28, 2017)
 
-    Exploratory data analysis by PCA, clustering, t-SNE.
+   Exploratory data analysis by PCA, clustering, t-SNE.
 
 12. **Lab 12** (Monday, May 1, 2017)
 
-    Sequence Alignment and Chemoinformatics/PDB tools
+   Sequence Alignment and Chemoinformatics/PDB tools
 
 13. **Lab 13** (Monday, May 8, 2017)
 
