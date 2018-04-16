@@ -82,25 +82,24 @@ The folder `peakcalling` contains the script `idr-analysis.sh` that runs IDR for
 
 ### Find motifs
 
-HOMER tool.
+See folder `motifs`.
+
+Proteins bind to DNA with a certain sequence specificity. The simplest model to represent such specificities is positional weight matrices, often called binding motifs.
+
+[HOMER](http://homer.ucsd.edu/homer/motif/) is a very popular software to run motif analysis for genomic regions of interest, for example, for ChIP-seq peaks.
+
+A script `run-homer.sh` runs a perl script wrapper `findMotifsGenome.pl` of the HOMER for our Foxp3 peaks. The results are stored in 
 
 
 
-### Explore in IGV
 
-Use IGV tool.
+### Explore in IGV or UCSC genome browser
+
+Use IGV tool or UCSC to explore the data.
 
 
 
-### Assign peaks to genes
+### Assign peaks to genes, overlap with ATAC-seq peaks, compare with RNA-seq expression, etc.
 
 R scripts using Bioconductor.
-
-
-### Overlap with ATAC-seq peaks
-
-
-
-
-### Compare with RNA-seq expression
 
