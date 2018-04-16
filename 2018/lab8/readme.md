@@ -63,8 +63,20 @@ macs2 callpeak -t foxp3_rep1.bam -c foxp3_input.bam -f BAM -n $prefix -B --SPMR 
 
 This command produces a number of files in folder `peaks-macs2/foxp3_rep1/` that are useful for further analysis and visualization. File `peaks-macs2/foxp3_rep1/foxp3_rep1_peaks.narrowPeak` contains the peaks in a [narrowPeak format](https://genome.ucsc.edu/FAQ/FAQformat.html#format12) that is an extended version of [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). File `peaks-macs2/foxp3_rep1/foxp3_rep1_model.r` is an R script that can produce a PDF file with diagnostics plots. To produce this file, run `Rscript --vanilla foxp3_rep1_model.r` in the folder that contains the file.
 
+The folder `peakcaling` contains the script `peak-calling.sh` that runs MACS2 for each of our three ChIP-seq replicates against control, with all the results in folder `peakcalling/peaks-macs2`.
+
 
 ### Identify reproducible peaks
+
+See folder `peakcalling`.
+
+Now we need to identify peaks reproducible between replicates. This is especially important for ChIP-seq data, for it is known to be quite noisy. For this, we should apply Irreproducible Discovery Rate (IDR), implemented as a [command line tool](https://github.com/nboley/idr). After installing the tool, you can run a command such as this:
+
+```
+idr --verbose --samples foxp3_rep1_peaks.narrowPeak foxp3_rep1_peaks.narrowPeak -o foxp3_rep1_foxp3_rep2.narrowPeak --log-output-file $idrdir/$prefix.log.txt --plot
+```
+
+The folder `peakcalling` contains the script `idr-analysis.sh` that runs IDR for each pair of replicates, using IDR threshold 0.1, with results in folder `peakcalling/idr-results`, and then consolidates the reproducible peaks between any pair of replicates in file `peakcalling/idr-results/foxp3_peaks.narrowPeak`.
 
 
 
