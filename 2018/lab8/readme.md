@@ -42,13 +42,17 @@ One tool perfectly suitable for quick alignment of millions of the short sequenc
 bowtie2 -p 10 -t --no-unal -X 500 -x mm10-bowtie2index/mm10 -U SRR1186971.fastq.gz >SRR1186971.sam 2>.bowtie2.SRR1186971
 ```
 
+(This command assumes that mm10 index for bowtie2 is in folder `mm10-bowtie2index`, where files forming the index start with `mm10`.)
+
 This produces the alignment files in the [SAM format](https://samtools.github.io/hts-specs/SAMv1.pdf). They can be manipulated using [SAMtools](http://samtools.sourceforge.net/). You need to install the tools, and then they can be used from the command line. For example, in order to extract reads of high sequencing quality that are uniquely aligned to the genome, you can use the command `samtools view`. This produces the alignments in the BAM format. BAM is a binary version of SAM. Then the command `samtools sort` is used to sort the aligned reads by coordinate, to produce a sorted BAM file. Then the command `samtools index` produces an index file (extension `.bam.bai`) that allows for a convenient by-coordinate access to aligned reads, given the BAM file and its index.
 
-The tool [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) can be used to obtain summarized statistics and quality metrics for the sequencing reads, both in the aligned format (SAM or BAM), or to the raw unaligned reads (FASTQ).
+Often the BAM files of interest are also publicly available or produced for you by the genomics core, and your analysis can start directly from BAM files.
 
-The script `run-alignment.sh` aligns the four our samples to the mouse genome and filters for the uniquely aligned reads with high sequencing and mapping quality, and then produces a sorted and indexed BAMs. It also runs the quality check with FastQC.
+The tool [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) can be used to obtain summarized statistics and quality metrics for the sequencing reads, both in the aligned format (SAM or BAM), or the raw unaligned reads (FASTQ).
 
-This results in the four BAM files for our samples, along with their indix files. The script `rename-samples.sh` creates symlinks with meaningful names `foxp3_input`, `foxp3_rep1`, `foxp3_rep2`, and `foxp3_rep3`.
+The script `run-alignment.sh` aligns the four our samples to the mouse genome and filters for the uniquely aligned reads with high sequencing and mapping quality, and then produces sorted and indexed BAMs. It also runs the quality check with FastQC.
+
+This results in the four BAM files for our samples, along with their index files. The script `rename-samples.sh` creates symlinks with meaningful names `foxp3_input`, `foxp3_rep1`, `foxp3_rep2`, and `foxp3_rep3`.
 
 
 ### Call peaks for each replicate
@@ -58,10 +62,10 @@ See folder `peakcalling`.
 Now we need to identify genomic regions enriched for the ChIP-seq signal, or peaks of the signal. These are the regions where we expect Foxp3 is bound to the genome. [MACS2](https://github.com/taoliu/MACS) is a popular tool that is used for that purpose. You need to install the tool, and then you can run it it from a command line like this:
 
 ```
-macs2 callpeak -t foxp3_rep1.bam -c foxp3_input.bam -f BAM -n $prefix -B --SPMR --outdir peaks-macs2/foxp3_rep1/ -g mm -p 0.1 --keep-dup 'auto' --call-summits 2>.macs
+macs2 callpeak -t foxp3_rep1.bam -c foxp3_input.bam -f BAM -n foxp1_rep1 -B --SPMR --outdir peaks-macs2/foxp3_rep1/ -g mm -p 0.1 --keep-dup 'auto' --call-summits 2>.macs
 ```
 
-This command produces a number of files in folder `peaks-macs2/foxp3_rep1/` that are useful for further analysis and visualization. File `peaks-macs2/foxp3_rep1/foxp3_rep1_peaks.narrowPeak` contains the peaks in a [narrowPeak format](https://genome.ucsc.edu/FAQ/FAQformat.html#format12) that is an extended version of [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). File `peaks-macs2/foxp3_rep1/foxp3_rep1_model.r` is an R script that can produce a PDF file with diagnostics plots. To produce this file, run `Rscript --vanilla foxp3_rep1_model.r` in the folder that contains the file.
+This command produces a number of files in the folder `peaks-macs2/foxp3_rep1/` that are useful for further analysis and visualization. File `peaks-macs2/foxp3_rep1/foxp3_rep1_peaks.narrowPeak` contains the peaks in a [narrowPeak format](https://genome.ucsc.edu/FAQ/FAQformat.html#format12) that is an extended version of [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). File `peaks-macs2/foxp3_rep1/foxp3_rep1_model.r` is an R script that can produce a PDF file with diagnostics plots. To produce this file, run `Rscript --vanilla foxp3_rep1_model.r` in the folder that contains the file.
 
 The folder `peakcaling` contains the script `peak-calling.sh` that runs MACS2 for each of our three ChIP-seq replicates against control, with all the results in folder `peakcalling/peaks-macs2`.
 
@@ -70,7 +74,7 @@ The folder `peakcaling` contains the script `peak-calling.sh` that runs MACS2 fo
 
 See folder `peakcalling`.
 
-Now we need to identify peaks reproducible between replicates. This is especially important for ChIP-seq data, for it is known to be quite noisy. For this, we should apply Irreproducible Discovery Rate (IDR), implemented as a [command line tool](https://github.com/nboley/idr). After installing the tool, you can run a command such as this:
+Now we need to identify peaks that are reproducible between replicates. This is especially important for ChIP-seq data, for it is known to be quite noisy. For this, we should apply Irreproducible Discovery Rate (IDR), implemented as a [command line tool](https://github.com/nboley/idr). After installing the tool, you can run a command such as this:
 
 ```
 idr --verbose --samples foxp3_rep1_peaks.narrowPeak foxp3_rep1_peaks.narrowPeak -o foxp3_rep1_foxp3_rep2.narrowPeak --log-output-file $idrdir/$prefix.log.txt --plot
@@ -79,27 +83,24 @@ idr --verbose --samples foxp3_rep1_peaks.narrowPeak foxp3_rep1_peaks.narrowPeak 
 The folder `peakcalling` contains the script `idr-analysis.sh` that runs IDR for each pair of replicates, using IDR threshold 0.1, with results in folder `peakcalling/idr-results`, and then consolidates the reproducible peaks between any pair of replicates in file `peakcalling/idr-results/foxp3_peaks.narrowPeak`.
 
 
-
-### Find motifs
+### Find binding specificity motifs
 
 See folder `motifs`.
 
-Proteins bind to DNA with a certain sequence specificity. The simplest model to represent such specificities is positional weight matrices, often called binding motifs.
+Proteins bind to DNA with a certain sequence specificity. The simplest model to represent such specificities is positional weight matrices. It important to remember that the limitation of this model is that it assumes independent nucleotide preference in each position. It has been shown that this is not entirely true biologically, but is a very useful and accurate approximation. This allows us to represent DNA binding specificities as sequence motifs.
 
 [HOMER](http://homer.ucsd.edu/homer/motif/) is a very popular software to run motif analysis for genomic regions of interest, for example, for ChIP-seq peaks.
 
-A script `run-homer.sh` runs a perl script wrapper `findMotifsGenome.pl` of the HOMER for our Foxp3 peaks. The results are stored in 
-
+A script `run-homer.sh` runs a perl script wrapper `findMotifsGenome.pl` of HOMER for our Foxp3 peaks. The results are stored in `motifs/homer-output`. Interestingly, the top three most significant motifs for our Foxp3 data are ETS family motif, RUNX family motif, and Forkhead family motif, as expected and previously reported from Foxp3 ChIP-seq.
 
 
 
 ### Explore in IGV or UCSC genome browser
 
-Use IGV tool or UCSC to explore the data.
+Use [IGV](http://software.broadinstitute.org/software/igv/) locally on your desktop or laptop or [UCSC Genome Browser](https://genome.ucsc.edu/) online to explore the data.
 
 
 
-### Assign peaks to genes, overlap with ATAC-seq peaks, compare with RNA-seq expression, etc.
+### Assign peaks to genes, overlap with ATAC-seq or histone ChIP-seq peaks, compare with RNA-seq expression, etc.
 
-R scripts using Bioconductor.
-
+Use R and Bioconductor to write your own code for exploratory and integrative analysis of the data.
