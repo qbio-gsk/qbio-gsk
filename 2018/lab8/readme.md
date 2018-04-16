@@ -7,17 +7,6 @@ Many aspects of molecular cell biology are measured using experimental technolog
 
 As an example, we will use Foxp3 ChIP-seq data generated from mouse Treg cells and published in [Arvey et al. Nat Immunology 2014](https://www.nature.com/articles/ni.2868) ([PMID: 24728351](https://www.ncbi.nlm.nih.gov/pubmed/24728351)), data publicly available at [GSE55773](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE55773). We will not use all of the data, but a representative subset of samples. The data and scripts are available in several subfolders along with this readme document. (Large data files are represented only by their names, or symlinks, as placeholders.)
 
-Folder structure:
-
-`align`
-
-`data`:
-  `data/atacseq`
-
-`motifs`
-`peakcalling`
-
-
 
 ## Steps in analysis
 
@@ -32,7 +21,9 @@ Our Foxp3 data is available from GEO at [GSE55773](https://www.ncbi.nlm.nih.gov/
 
 You can run a command such as this:
 
-```fastq-dump -I --gzip -A SRR1186971```
+```
+fastq-dump -I --gzip -A SRR1186971
+```
 
 which downloads a file `SRR1186971.fastq.gz`.
 
@@ -60,31 +51,43 @@ The script `run-alignment.sh` aligns the four our samples to the mouse genome an
 This results in the four BAM files for our samples, along with their indix files. The script `rename-samples.sh` creates symlinks with meaningful names `foxp3_input`, `foxp3_rep1`, `foxp3_rep2`, and `foxp3_rep3`.
 
 
-### Peak calling
+### Call peaks for each replicate
 
-Now we need to identify genomic regions enriched for the ChIP-seq signal, or peaks of the signal. [MACS2](https://github.com/taoliu/MACS) is a popular tool that is used for that purpose.
+See folder `peakcalling`.
 
-`macs2`
+Now we need to identify genomic regions enriched for the ChIP-seq signal, or peaks of the signal. These are the regions where we expect Foxp3 is bound to the genome. [MACS2](https://github.com/taoliu/MACS) is a popular tool that is used for that purpose. You need to install the tool, and then you can run it it from a command line like this:
 
+```
+macs2 callpeak -t foxp3_rep1.bam -c foxp3_input.bam -f BAM -n $prefix -B --SPMR --outdir peaks-macs2/foxp3_rep1/ -g mm -p 0.1 --keep-dup 'auto' --call-summits 2>.macs
+```
 
-### Assign peaks to genes
-
-R scripts using Bioconductor
-
-
-### Explore in IGV
+This command produces a number of files in folder `peaks-macs2/foxp3_rep1/` that are useful for further analysis and visualization. File `peaks-macs2/foxp3_rep1/foxp3_rep1_peaks.narrowPeak` contains the peaks in a [narrowPeak format](https://genome.ucsc.edu/FAQ/FAQformat.html#format12) that is an extended version of [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). File `peaks-macs2/foxp3_rep1/foxp3_rep1_model.r` is an R script that can produce a PDF file with diagnostics plots. To produce this file, run `Rscript --vanilla foxp3_rep1_model.r` in the folder that contains the file.
 
 
-
-
-### Overlap with ATAC-seq peaks
-
+### Identify reproducible peaks
 
 
 
 ### Find motifs
 
-HOMER
+HOMER tool.
+
+
+
+### Explore in IGV
+
+Use IGV tool.
+
+
+
+### Assign peaks to genes
+
+R scripts using Bioconductor.
+
+
+### Overlap with ATAC-seq peaks
+
+
 
 
 ### Compare with RNA-seq expression
