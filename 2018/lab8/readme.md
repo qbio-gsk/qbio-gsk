@@ -62,7 +62,7 @@ See folder `peakcalling`.
 Now we need to identify genomic regions enriched for the ChIP-seq signal, or peaks of the signal. These are the regions where we expect Foxp3 is bound to the genome. [MACS2](https://github.com/taoliu/MACS) is a popular tool that is used for that purpose. You need to install the tool, and then you can run it it from a command line like this:
 
 ```
-macs2 callpeak -t foxp3_rep1.bam -c foxp3_input.bam -f BAM -n foxp1_rep1 -B --SPMR --outdir peaks-macs2/foxp3_rep1/ -g mm -p 0.1 --keep-dup 'auto' --call-summits 2>.macs
+macs2 callpeak -t foxp3_rep1.bam -c foxp3_input.bam -f BAM -n foxp3_rep1 -B --SPMR --outdir peaks-macs2/foxp3_rep1/ -g mm -p 0.1 --keep-dup 'auto' --call-summits 2>.macs
 ```
 
 This command produces a number of files in the folder `peaks-macs2/foxp3_rep1/` that are useful for further analysis and visualization. File `peaks-macs2/foxp3_rep1/foxp3_rep1_peaks.narrowPeak` contains the peaks in a [narrowPeak format](https://genome.ucsc.edu/FAQ/FAQformat.html#format12) that is an extended version of [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1). File `peaks-macs2/foxp3_rep1/foxp3_rep1_model.r` is an R script that can produce a PDF file with diagnostics plots. To produce this file, run `Rscript --vanilla foxp3_rep1_model.r` in the folder that contains the file.
@@ -91,7 +91,11 @@ Proteins bind to DNA with a certain sequence specificity. The simplest model to 
 
 [HOMER](http://homer.ucsd.edu/homer/motif/) is a very popular software to run motif analysis for genomic regions of interest, for example, for ChIP-seq peaks.
 
-A script `run-homer.sh` runs a perl script wrapper `findMotifsGenome.pl` of HOMER for our Foxp3 peaks. The results are stored in `motifs/homer-output`. Interestingly, the top three most significant motifs for our Foxp3 data are ETS family motif, RUNX family motif, and Forkhead family motif, as expected and previously reported from Foxp3 ChIP-seq.
+A script `run-homer.sh` runs a perl script wrapper `findMotifsGenome.pl` of HOMER for our Foxp3 peaks. The results are stored in `motifs/homer-output`. 
+
+The HTML document with *de novo* discovered motifs and their best matches to the database motifs is in `motifs/homer-output/homerResults.html`, can be opened in your browser. Interestingly, the top three most significant motifs for our Foxp3 data are ETS family motif, RUNX family motif, and Forkhead family motif, as expected and previously reported from Foxp3 ChIP-seq.
+
+The HTML document with the known motifs from the database searched over the input genomic regions is in file `motifs/homer-output/knownResults.html`.
 
 
 
