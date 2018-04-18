@@ -80,7 +80,7 @@ Now we need to identify peaks that are reproducible between replicates. This is 
 idr --verbose --samples foxp3_rep1_peaks.narrowPeak foxp3_rep1_peaks.narrowPeak -o foxp3_rep1_foxp3_rep2.narrowPeak --log-output-file $idrdir/$prefix.log.txt --plot
 ```
 
-The folder `peakcalling` contains the script `idr-analysis.sh` that runs IDR for each pair of replicates, using IDR threshold 0.1, with results in folder `peakcalling/idr-results`, and then consolidates the reproducible peaks between any pair of replicates in file `peakcalling/idr-results/foxp3_peaks.narrowPeak`.
+The folder `peakcalling` contains the script `idr-analysis.sh` that runs IDR for each pair of replicates, using IDR threshold 0.1, with results in folder `peakcalling/idr-results`, and then consolidates the reproducible peaks between any pair of replicates in file `peakcalling/idr-results/foxp3_peaks.narrowPeak`. The consolidation step requires [BEDtools](http://bedtools.readthedocs.io/en/latest/), a highly efficient set of command line utilities for manipulation with BED and other genomic files. Another more recent utility with the same and complimentary functionality is [deepTools](https://deeptools.readthedocs.io/).
 
 
 ### Find binding specificity motifs
