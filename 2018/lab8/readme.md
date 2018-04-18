@@ -107,4 +107,4 @@ Use [IGV](http://software.broadinstitute.org/software/igv/) locally on your desk
 
 ### Assign peaks to genes, overlap with ATAC-seq or histone ChIP-seq peaks, compare with RNA-seq expression, etc.
 
-Use R and Bioconductor to write your own code for exploratory and integrative analysis of the data.
+Use R and Bioconductor to write your own code for exploratory and integrative analysis of the data. Technics and tools for such analysis were discussed in our [Lab 6](../lab6/schedule.md).
