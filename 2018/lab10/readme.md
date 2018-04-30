@@ -11,6 +11,8 @@ We will go over some tools to do exploratory analysis of your data in R. We will
 - [The vignette on dimensionality reduction in R](http://jtleek.com/genstats/inst/doc/02_03_dimension-reduction.html).
 - [DESeq2 vignette](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html).
 - [How to use t-SNE effectively](https://distill.pub/2016/misread-tsne/).
+- [MAGIC for scRNA-seq data imputation](https://github.com/KrishnaswamyLab/MAGIC) and [a Jupyter notebook with an example for bone marrow data](http://nbviewer.jupyter.org/github/KrishnaswamyLab/magic/blob/develop/python/tutorial_notebooks/Magic_single_cell_RNAseq_bone_marrow_data.ipynb).
+
 
 
 Please prepare in advance by installing the following packages:
