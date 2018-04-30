@@ -28,4 +28,5 @@ biocLite("alyssafrazee/RSkittleBrewer")
 
 - [Last year's class on exploratory data analysis](../../2017/lab11).
 - [Online book on genomics data analysis](http://genomicsclass.github.io/book/) including sections covering the same material as above: [Exploratory data analysis](http://genomicsclass.github.io/book/pages/exploratory_data_analysis.html), [Dimension reduction](http://genomicsclass.github.io/book/pages/pca_motivation.html), [SVD](http://genomicsclass.github.io/book/pages/svd.html), [PCA](http://genomicsclass.github.io/book/pages/PCA.html), [Clustering and heatmaps](http://genomicsclass.github.io/book/pages/clustering_and_heatmaps.html).
-
+- [Tools for data visualization](http://selection.datavisualization.ch/).
+- [More of interactive publications on data analysis](https://distill.pub/).
