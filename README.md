@@ -1,2 +1,2 @@
 # qbio-gsk
-The course repository for the GSK quantitative biology course for winter 2017.  See the [syllabus](./2017/Syllabus2017.md) for details.
+The repository for the GSK Quantitative and Computational Biology courses taught in 2016-2019. See individual sections for details.
