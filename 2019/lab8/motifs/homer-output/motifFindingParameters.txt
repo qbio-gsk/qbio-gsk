@@ -1,0 +1,1 @@
+cmd = ../peakcalling/idr-results/foxp3_peaks.narrowPeak mm10 homer-output

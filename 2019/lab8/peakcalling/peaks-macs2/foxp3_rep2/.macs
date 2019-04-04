@@ -1,0 +1,115 @@
+INFO  @ Tue, 13 Jun 2017 22:46:33: 
+# Command line: callpeak -t /cbio/cllab/projects/pritykin/TregFoxp/data/bam/chipseq-merged-other/foxp3_arvey2014_rep2_36nt.bam -c /cbio/cllab/projects/pritykin/TregFoxp/data/bam/chipseq-merged-other/foxp3_arvey2014_input_36nt.bam -f BAM -n foxp3_arvey2014_rep2_36nt -B --SPMR --outdir peaks-macs2/foxp3_arvey2014_rep2_36nt/ -g mm -p 0.1 --keep-dup auto --call-summits
+# ARGUMENTS LIST:
+# name = foxp3_arvey2014_rep2_36nt
+# format = BAM
+# ChIP-seq file = ['/cbio/cllab/projects/pritykin/TregFoxp/data/bam/chipseq-merged-other/foxp3_arvey2014_rep2_36nt.bam']
+# control file = ['/cbio/cllab/projects/pritykin/TregFoxp/data/bam/chipseq-merged-other/foxp3_arvey2014_input_36nt.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-01
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Tue, 13 Jun 2017 22:46:33: #1 read tag files... 
+INFO  @ Tue, 13 Jun 2017 22:46:33: #1 read treatment tags... 
+INFO  @ Tue, 13 Jun 2017 22:46:39:  1000000 
+INFO  @ Tue, 13 Jun 2017 22:46:45:  2000000 
+INFO  @ Tue, 13 Jun 2017 22:46:51:  3000000 
+INFO  @ Tue, 13 Jun 2017 22:46:57:  4000000 
+INFO  @ Tue, 13 Jun 2017 22:47:03:  5000000 
+INFO  @ Tue, 13 Jun 2017 22:47:09:  6000000 
+INFO  @ Tue, 13 Jun 2017 22:47:15:  7000000 
+INFO  @ Tue, 13 Jun 2017 22:47:21:  8000000 
+INFO  @ Tue, 13 Jun 2017 22:47:27:  9000000 
+INFO  @ Tue, 13 Jun 2017 22:47:33:  10000000 
+INFO  @ Tue, 13 Jun 2017 22:47:39:  11000000 
+INFO  @ Tue, 13 Jun 2017 22:47:45:  12000000 
+INFO  @ Tue, 13 Jun 2017 22:47:51:  13000000 
+INFO  @ Tue, 13 Jun 2017 22:47:57:  14000000 
+INFO  @ Tue, 13 Jun 2017 22:48:03:  15000000 
+INFO  @ Tue, 13 Jun 2017 22:48:09:  16000000 
+INFO  @ Tue, 13 Jun 2017 22:48:16:  17000000 
+INFO  @ Tue, 13 Jun 2017 22:48:22:  18000000 
+INFO  @ Tue, 13 Jun 2017 22:48:28:  19000000 
+INFO  @ Tue, 13 Jun 2017 22:48:34:  20000000 
+INFO  @ Tue, 13 Jun 2017 22:48:40:  21000000 
+INFO  @ Tue, 13 Jun 2017 22:48:46:  22000000 
+INFO  @ Tue, 13 Jun 2017 22:48:52:  23000000 
+INFO  @ Tue, 13 Jun 2017 22:48:58:  24000000 
+INFO  @ Tue, 13 Jun 2017 22:49:04:  25000000 
+INFO  @ Tue, 13 Jun 2017 22:49:06: #1.2 read input tags... 
+INFO  @ Tue, 13 Jun 2017 22:49:11:  1000000 
+INFO  @ Tue, 13 Jun 2017 22:49:16:  2000000 
+INFO  @ Tue, 13 Jun 2017 22:49:22:  3000000 
+INFO  @ Tue, 13 Jun 2017 22:49:27:  4000000 
+INFO  @ Tue, 13 Jun 2017 22:49:32:  5000000 
+INFO  @ Tue, 13 Jun 2017 22:49:38:  6000000 
+INFO  @ Tue, 13 Jun 2017 22:49:43:  7000000 
+INFO  @ Tue, 13 Jun 2017 22:49:49:  8000000 
+INFO  @ Tue, 13 Jun 2017 22:49:54:  9000000 
+INFO  @ Tue, 13 Jun 2017 22:49:59:  10000000 
+INFO  @ Tue, 13 Jun 2017 22:50:05:  11000000 
+INFO  @ Tue, 13 Jun 2017 22:50:10:  12000000 
+INFO  @ Tue, 13 Jun 2017 22:50:16:  13000000 
+INFO  @ Tue, 13 Jun 2017 22:50:21:  14000000 
+INFO  @ Tue, 13 Jun 2017 22:50:27:  15000000 
+INFO  @ Tue, 13 Jun 2017 22:50:32:  16000000 
+INFO  @ Tue, 13 Jun 2017 22:50:37:  17000000 
+INFO  @ Tue, 13 Jun 2017 22:50:42:  18000000 
+INFO  @ Tue, 13 Jun 2017 22:50:48:  19000000 
+INFO  @ Tue, 13 Jun 2017 22:50:53:  20000000 
+INFO  @ Tue, 13 Jun 2017 22:50:59:  21000000 
+INFO  @ Tue, 13 Jun 2017 22:51:04:  22000000 
+INFO  @ Tue, 13 Jun 2017 22:51:10:  23000000 
+INFO  @ Tue, 13 Jun 2017 22:51:15:  24000000 
+INFO  @ Tue, 13 Jun 2017 22:51:20:  25000000 
+INFO  @ Tue, 13 Jun 2017 22:51:26:  26000000 
+INFO  @ Tue, 13 Jun 2017 22:51:31:  27000000 
+INFO  @ Tue, 13 Jun 2017 22:51:37:  28000000 
+INFO  @ Tue, 13 Jun 2017 22:51:42:  29000000 
+INFO  @ Tue, 13 Jun 2017 22:51:47:  30000000 
+INFO  @ Tue, 13 Jun 2017 22:51:51: #1 tag size is determined as 36 bps 
+INFO  @ Tue, 13 Jun 2017 22:51:51: #1 tag size = 36 
+INFO  @ Tue, 13 Jun 2017 22:51:51: #1  total tags in treatment: 25127921 
+INFO  @ Tue, 13 Jun 2017 22:51:51: #1 calculate max duplicate tags in single position based on binomial distribution... 
+INFO  @ Tue, 13 Jun 2017 22:51:52: #1  max_dup_tags based on binomial = 2 
+INFO  @ Tue, 13 Jun 2017 22:51:52: #1 filter out redundant tags at the same location and the same strand by allowing at most 2 tag(s) 
+INFO  @ Tue, 13 Jun 2017 22:51:52: #1  tags after filtering in treatment: 14271724 
+INFO  @ Tue, 13 Jun 2017 22:51:52: #1  Redundant rate of treatment: 0.43 
+INFO  @ Tue, 13 Jun 2017 22:51:52: #1  total tags in control: 30567397 
+INFO  @ Tue, 13 Jun 2017 22:51:52: #1  for control, calculate max duplicate tags in single position based on binomial distribution... 
+INFO  @ Tue, 13 Jun 2017 22:51:53: #1  max_dup_tags based on binomial = 2 
+INFO  @ Tue, 13 Jun 2017 22:51:53: #1 filter out redundant tags at the same location and the same strand by allowing at most 2 tag(s) 
+INFO  @ Tue, 13 Jun 2017 22:51:53: #1  tags after filtering in control: 13859727 
+INFO  @ Tue, 13 Jun 2017 22:51:53: #1  Redundant rate of control: 0.55 
+INFO  @ Tue, 13 Jun 2017 22:51:53: #1 finished! 
+INFO  @ Tue, 13 Jun 2017 22:51:53: #2 Build Peak Model... 
+INFO  @ Tue, 13 Jun 2017 22:51:53: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #2 number of paired peaks: 1898 
+INFO  @ Tue, 13 Jun 2017 22:51:56: start model_add_line... 
+INFO  @ Tue, 13 Jun 2017 22:51:56: start X-correlation... 
+INFO  @ Tue, 13 Jun 2017 22:51:56: end of X-cor 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #2 finished! 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #2 predicted fragment length is 140 bps 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #2 alternative fragment length(s) may be 140 bps 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #2.2 Generate R script for model : peaks-macs2/foxp3_arvey2014_rep2_36nt/foxp3_arvey2014_rep2_36nt_model.r 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #3 Call peaks... 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #3 Going to call summits inside each peak ... 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #3 Call peaks with given -log10pvalue cutoff: 1.00000 ... 
+INFO  @ Tue, 13 Jun 2017 22:51:56: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Tue, 13 Jun 2017 22:52:45: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Tue, 13 Jun 2017 22:52:45: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... foxp3_arvey2014_rep2_36nt_treat_pileup.bdg 
+INFO  @ Tue, 13 Jun 2017 22:52:45: #3   Write bedGraph files for control lambda (after scaling if necessary)... foxp3_arvey2014_rep2_36nt_control_lambda.bdg 
+INFO  @ Tue, 13 Jun 2017 22:52:45: #3   --SPMR is requested, so pileup will be normalized by sequencing depth in million reads. 
+INFO  @ Tue, 13 Jun 2017 22:52:45: #3 Call peaks for each chromosome... 
+INFO  @ Tue, 13 Jun 2017 22:57:23: #4 Write output xls file... peaks-macs2/foxp3_arvey2014_rep2_36nt/foxp3_arvey2014_rep2_36nt_peaks.xls 
+INFO  @ Tue, 13 Jun 2017 22:57:27: #4 Write peak in narrowPeak format file... peaks-macs2/foxp3_arvey2014_rep2_36nt/foxp3_arvey2014_rep2_36nt_peaks.narrowPeak 
+INFO  @ Tue, 13 Jun 2017 22:57:29: #4 Write summits bed file... peaks-macs2/foxp3_arvey2014_rep2_36nt/foxp3_arvey2014_rep2_36nt_summits.bed 
+INFO  @ Tue, 13 Jun 2017 22:57:31: Done! 
