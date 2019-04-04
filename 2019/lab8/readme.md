@@ -1,6 +1,6 @@
 # Lab 8: Practical ChIP-seq analysis
 
-### Monday April 4, 2019, 12:45-2:45pm
+### Thursday April 4, 2019, 12:45-2:45pm
 
 
 Many aspects of molecular cell biology are measured using experimental technologies based on high-throughput [DNA sequencing](http://www.cs.jhu.edu/~langmea/resources/lecture_notes/dna_sequencing.pdf). Research areas that deal with these data are sometimes called [Genomics and Computational Genomics](http://www.cs.jhu.edu/~langmea/resources/lecture_notes/genomics_comp_genomics.pdf). [ChIP-seq](https://en.wikipedia.org/wiki/ChIP-sequencing) is one such technology for detecting protein binding to DNA. We will go over practical steps of the ChIP-seq data analysis. Many of these steps and corresponding tools are representative of what could be applied to other sequencing-based data as well.
