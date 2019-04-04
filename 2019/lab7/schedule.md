@@ -47,6 +47,10 @@ library("BSgenome.Hsapiens.UCSC.hg19")
 ### ChIP-seq and beyond
 In the second half of the class and in next class, we will learn some introductory steps of how to analyze ChIP-seq and some similar improved assays (ChIP-exo, Cut&Run) and other related assays (ATAC-seq, DNase-seq). In preparation to that, please see [materials from last year's class](https://github.com/qbio-gsk/qbio-gsk/tree/master/2018/lab8).
 
+### Update: slides
+
+[Slides](ChIPseq-bioconductor.html) used in this class, along with the materials above.
+
 
 ##### Additional useful materials
 
